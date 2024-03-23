@@ -1,13 +1,20 @@
-import DinoDrink from "../assets/dino-drink-liquid.png"
-import "../styles/home.css"
+import React, { useEffect } from 'react';
+import DinoDrink from "../assets/dino-drink-liquid.png";
+import "../styles/home.css";
 
 function Home() {
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "//code.tidio.co/lajckmxmipp2wtemvuou2vge9ma51un1.js";
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
     return (
         <div className="container section-1">
-            {/* Start of chatbot script */}
-            <script src="//code.tidio.co/lajckmxmipp2wtemvuou2vge9ma51un1.js" async></script>
-            {/* End of chatbot script */}
-
             <div className="left">
                 <div className="sec1-title">
                     <h1 className="text1">DINO LUZZI</h1> 
@@ -27,4 +34,4 @@ function Home() {
     );
 }   
 
-export default Home
+export default Home;
