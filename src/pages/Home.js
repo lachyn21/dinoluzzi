@@ -5,7 +5,7 @@ function Home() {
     return (
         <div className="container section-1">
             {/* Start of chatbot script */}
-            <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=c0a9e439-e854-4494-835e-75f303129020"></script>
+            <script src="//code.tidio.co/lajckmxmipp2wtemvuou2vge9ma51un1.js" async></script>
             {/* End of chatbot script */}
 
             <div className="left">
