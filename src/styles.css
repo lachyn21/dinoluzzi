@@ -33,6 +33,18 @@ body {
     line-height: 1.7;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500; 
+}
+
+h1 {
+    font-size: 2.5rem;
+  }
+
 /* Images */
 
 .cropped-logo {
@@ -44,6 +56,58 @@ body {
 .container {
     width: 100%;
   } 
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 1px orange;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+  
+  .btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
+  
+  /* Additional styles for hover/focus effects */
+  .btn:hover,
+  .btn:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: var(--color-primary-variant);
+  }
+  
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  .btn-accent:hover,
+  .btn-accent:focus {
+    background-color: var(--color-accent-variant);
+  }
 
 /* Nav Bar */
 
