@@ -19,7 +19,7 @@ export default function Navbar()
                 <CustomLink to="/">Home</CustomLink>
                 <CustomLink to="/news">News</CustomLink>
                 <CustomLink to="/locations">Store Locations</CustomLink>
-                <CustomLink className="purchase" to="/purchase">Buy Now!</CustomLink>
+                <CustomLink className="purchase" to="/purchase">Buy Now</CustomLink>
             </ul>
         </div>
         

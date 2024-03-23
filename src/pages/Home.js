@@ -6,12 +6,12 @@ function Home() {
         <div className="container section-1">
             <div className="left">
                 <div className="sec1-title">
-                    <h1 className="text1">DINO LUZZI</h1> 
-                    <h1 className="text2"> ENERGY DRINK</h1>
+                    <h1 className="text1">DINO LUZZI <span className="text2">ENERGY DRINK</span></h1>
                 </div>  
                 <div className="sec1-p">
                     <p>
-                    This delicious, healthful, energizing refresher made in Italy is distinguished from its more well-known competitors by its decided non-metallic after taste.
+                        This delicious, healthful, energizing refresher made in Italy is distinguished from its more well-known competitors by its decided non-metallic after taste.
+                        Dino Luzzi Energy Drink is rapidly expanding. If you do not see it in your favorite store please let us know!
                     </p>
                 </div>
                 <div className="sec1-p">
