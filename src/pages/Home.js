@@ -3,16 +3,6 @@ import DinoDrink from "../assets/dino-drink-liquid.png";
 import "../styles/home.css";
 
 function Home() {
-    useEffect(() => {
-        const script = document.createElement("script");
-        script.src = "//code.tidio.co/lajckmxmipp2wtemvuou2vge9ma51un1.js";
-        script.async = true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
-
     return (
         <div className="container section-1">
             <div className="left">
