@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
 import DinoDrink from "../assets/dino-drink-liquid.png";
 import "../styles/home.css";
 
 function Home() {
-
-    
     return (
         <div className="container section-1">
             <div className="left">
