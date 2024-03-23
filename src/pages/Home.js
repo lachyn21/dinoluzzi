@@ -9,8 +9,6 @@ import zeroIcon from "../assets/zeroIcon.png";
 import "../styles/home.css";
 
 function Home() {
-
-    
     return (
         <>
         <div className="container section-1">
@@ -30,9 +28,9 @@ function Home() {
                     </p>
                 </div>
                 <div className="sec1-btn">
-                    <button className="btn btn-accent">
+                    <a href="https://www.amazon.com/dp/B09K7Y5DG7/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD" target="_blank" rel="noopener noreferrer" className="btn btn-accent">
                         Buy Now
-                    </button>
+                    </a>
                 </div>
             </div>
             <div className="right">
