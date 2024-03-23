@@ -11,16 +11,14 @@
   }
   
   :root {
-    --color-bg: #e8e6e6; /* Light gray background */
-    --color-bg-variant: #9b9a9a; /* Slightly darker variant of the background */
-    --color-primary: #0021a5; /* University of Florida blue */
-    --color-primary-variant: #ff8000; /* University of Florida orange */
-    --color-accent: #ff4500;
-    --color-accent-variant: #cc3700;
-    --color-white: #fff;
-    --color-light: #f8f8f8;
-    --color-black: #000;
-    --color-dark: #242424;
+    --color-bg: #000000; 
+    --color-bg-variant: #939498; 
+    --color-primary: #ffffff; 
+    --color-primary-variant: #d8d8d8; 
+    --color-accent: #C4A00E;
+    --color-accent-variant: #B97D08;
+    --color-black: #000000; 
+    --color-white: #ffffff; 
     
     --transition: all 400ms ease;
 
@@ -31,31 +29,43 @@
 
 body {
     background: var(--color-bg);
-    color: var(--color-dark);
+    color: var(--color-primary);
     line-height: 1.7;
 }
+
+/* Images */
+
+.cropped-logo {
+  height: 4rem; /* You must set a specified height */
+} 
 
 /* General Styles */
 
 .container {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 3rem;
   } 
 
 /* Nav Bar */
 
 .nav {
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-bg);
     display: flex;
-    justify-content: space-between;
     align-items: stretch;
-    gap: 2rem;
-    padding: 0 1rem;
+    gap: 2rem;  
+    padding-left: 2rem;
   }
   
-  .site-title {
+  .nav .title {
+    display: flex;
+    justify-content: flex-start;
     font-size: 2rem;
+  }
+
+  .nav .links {
+    display: flex;
+    justify-content: flex-end;
   }
   
   .nav ul {
@@ -65,6 +75,11 @@ body {
     display: flex;
     gap: 1rem;
   }
+
+  .nav ul .purchase {
+    background-color: var(--color-bg-variant);
+    padding: 1rem;
+  } 
   
   .nav a {
     color: inherit;
