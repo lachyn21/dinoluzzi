@@ -9,9 +9,9 @@ export default function Navbar()
             <a href="/">
                 <img src={logo} className="cropped-logo" alt="DinoLuzziLogo"></img>
             </a>
-            <Link to="/">
+            {/* <Link to="/">
                 DINO LUZZI ENERGY DRINK
-            </Link>
+            </Link> */}
         </div>
 
         <div className="links">

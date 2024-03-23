@@ -43,16 +43,16 @@ body {
 
 .container {
     width: 100%;
-    margin: 0 3rem;
   } 
 
 /* Nav Bar */
 
 .nav {
-    background-color: var(--color-primary);
-    color: var(--color-bg);
+    background-color: var(--color-black);
+    color: var(--color-primary);
     display: flex;
     align-items: stretch;
+    justify-content: space-between;
     gap: 2rem;  
     padding-left: 2rem;
   }
@@ -76,8 +76,9 @@ body {
     gap: 1rem;
   }
 
-  .nav ul .purchase {
-    background-color: var(--color-bg-variant);
+  .nav .purchase {
+    color: var(--color-black);
+    background-color: var(--color-primary);
     padding: 1rem;
   } 
   
@@ -88,12 +89,22 @@ body {
     display: flex;
     align-items: center;
     padding: .25rem
-  }
+  } 
+
+  .nav li.active .purchase {
+    color: inherit;
+  } 
+
+  .nav li:hover .purchase {
+    color: inherit;
+  } 
   
   .nav li.active {
-    color: var(--color-accent);
+    color: var(--color-accent-variant);
   }
   
   .nav li:hover {
-    color: var(--color-primary-variant);
+    color: var(--color-accent);
   }
+
+  
