@@ -1,13 +1,11 @@
-import DinoDrink from "../assets/dino-drink-liquid.png"
-import "../styles/home.css"
+import React, { useEffect } from 'react';
+import DinoDrink from "../assets/dino-drink-liquid.png";
+import "../styles/home.css";
 
 function Home() {
-    return (
-        <>
-        {/* Start of chatbot script */}
-        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=c0a9e439-e854-4494-835e-75f303129020"></script>
-        {/* End of chatbot script */}
 
+    
+    return (
         <div className="container section-1">
             <div className="left">
                 <div className="sec1-title">
@@ -34,8 +32,7 @@ function Home() {
                 <img src={DinoDrink} className="dino-drink" alt="DinoLuzziDrink"></img>
             </div>
         </div>
-        </>
     );
 }   
 
-export default Home
+export default Home;

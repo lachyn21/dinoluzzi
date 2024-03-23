@@ -7,7 +7,7 @@ import Locations from './pages/Locations';
 import Purchase from './pages/Purchase';
 import FAQ from './pages/FAQ';
 import NotFound404 from './pages/NotFound404';
-
+import Chatbot from './components/chatbot';
 
 
 function App() {
@@ -15,6 +15,9 @@ function App() {
     <>
     <Navbar />
       <div className='container'>
+        {/* Add Chatbot component */}
+        <Chatbot />
+
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/news" element={<News />}/>
