@@ -1,11 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Divider from "../assets/divider.png";
 import DinoDrink from "../assets/dino-drink-liquid.png";
+import dialIcon from "../assets/dialIcon.png";
+import energyIcon from "../assets/energyIcon.png";
+import italyIcon from "../assets/italyIcon.png";
+import leafIcon from "../assets/leafIcon.png";
+import zeroIcon from "../assets/zeroIcon.png";
 import "../styles/home.css";
 
 function Home() {
 
     
     return (
+        <>
         <div className="container section-1">
             <div className="left">
                 <div className="sec1-title">
@@ -32,6 +39,44 @@ function Home() {
                 <img src={DinoDrink} className="dino-drink" alt="DinoLuzziDrink"></img>
             </div>
         </div>
+        <div className='divider'>
+            <img src={Divider} alt="DividerImage"></img>
+        </div>
+        <div className='container section-2'>
+            <div className='top'>
+                <div>
+                    <h2>
+                        Low Calories
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                        Maximum Energy
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                        Smart Organics
+                    </h2> 
+                </div>
+            </div>
+            <div className='bottom'>
+                <div>
+                    <img src={zeroIcon} className='icon'></img>
+                    <h2>
+                        Zero Fat
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                       Italian Import
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        </>
+
     );
 }   
 

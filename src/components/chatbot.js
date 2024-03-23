@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'; // Importing React and useEffect
+import { useEffect } from 'react'; // Importing React and useEffect
 // Add other imports if necessary
 
 // Define your component

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 /* ============ GLOBAL STYLES ============ */
 
 * {
@@ -38,7 +40,9 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: "Shrikhand", serif;
   font-weight: 500; 
+  font-style: normal;
 }
 
 h1 {
@@ -48,8 +52,26 @@ h1 {
 /* Images */
 
 .cropped-logo {
-  height: 4rem; /* You must set a specified height */
+  height: 4rem;
 } 
+
+.dino-drink {
+  height: 500px;
+}
+
+.icon {
+  height: 10%;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+}
+
+.divider img {
+  height: auto;
+  max-width: 50%;
+}
 
 /* General Styles */
 
