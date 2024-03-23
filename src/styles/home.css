@@ -1,5 +1,7 @@
 @import url("../styles.css");
 
+
+/* SECTION 1 */
 .section-1 {
     height: 30rem;
     display: flex;
@@ -15,6 +17,7 @@
 }
 
 .section-1 .left .sec1-title {
+    padding-top: 5rem;
     font-size: 1.5rem;
     display: flex;
     gap: 1rem;
@@ -48,6 +51,42 @@
     
 }
 
-.dino-drink {
-    height: 500px;
+/* SECTION 2 */
+
+.section-2 {
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
 }
+
+.section-2 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1rem;
+    gap: 5rem;
+}
+
+.section-2 .top{
+
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.section-2 .bottom{
+    
+    border-color: green;
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+
+
+
