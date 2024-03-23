@@ -1,0 +1,84 @@
+/* ============ GLOBAL STYLES ============ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  :root {
+    --color-bg: #e8e6e6; /* Light gray background */
+    --color-bg-variant: #9b9a9a; /* Slightly darker variant of the background */
+    --color-primary: #0021a5; /* University of Florida blue */
+    --color-primary-variant: #ff8000; /* University of Florida orange */
+    --color-accent: #ff4500;
+    --color-accent-variant: #cc3700;
+    --color-white: #fff;
+    --color-light: #f8f8f8;
+    --color-black: #000;
+    --color-dark: #242424;
+    
+    --transition: all 400ms ease;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+  }
+
+body {
+    background: var(--color-bg);
+    color: var(--color-dark);
+    line-height: 1.7;
+}
+
+/* General Styles */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+  } 
+
+/* Nav Bar */
+
+.nav {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .site-title {
+    font-size: 2rem;
+  }
+  
+  .nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem
+  }
+  
+  .nav li.active {
+    color: var(--color-accent);
+  }
+  
+  .nav li:hover {
+    color: var(--color-primary-variant);
+  }
