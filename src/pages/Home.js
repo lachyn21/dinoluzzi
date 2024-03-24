@@ -39,7 +39,7 @@ function Home() {
                 </div>
             </div>
             <div className="img-container">
-                <img src={DinoDrink} className="medium-image" alt="DinoLuzziDrink"></img>
+                <img src={DinoDrink} className="large-image" alt="DinoLuzziDrink"></img>
             </div>
         </div>
         <div className='divider'>
@@ -179,8 +179,8 @@ function Home() {
                     </p>
                 </div>
             </a>
-            <a href="https://www.wjhl.com/business/press-releases/accesswire/820119/dino-luzzi-energy-drink-and-king-esport-set-to-ignite-the-gaming-scene-at-xmas-comics-esports-partnership-energizing-dino-luzzis-influence/" target="_blank" rel="noopener noreferrer" className='news-container'>
-                <img src={News3} className='news-image' alt="Xmas Comics Logo">
+                <a href="https://www.wjhl.com/business/press-releases/accesswire/820119/dino-luzzi-energy-drink-and-king-esport-set-to-ignite-the-gaming-scene-at-xmas-comics-esports-partnership-energizing-dino-luzzis-influence/" target="_blank" rel="noopener noreferrer" className='news-container'>
+                    <img src={News3} className='news-image' alt="Xmas Comics Logo">
                 </img>
                 <div className='text-content'>
                     <h2>
