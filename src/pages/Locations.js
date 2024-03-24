@@ -76,3 +76,68 @@ function Locations() {
 
 export default Locations;
 */
+
+// Loads maps finally but gives an error
+import React, { useEffect, useRef, useState } from 'react';
+
+function Locations() {
+    const mapRef = useRef(null);
+    const [isMapLoaded, setIsMapLoaded] = useState(false);
+
+    // Simulated store locations database
+    const [stores, setStores] = useState([
+        { id: 1, name: "Store 1", lat: -34.397, lng: 150.644 },
+        { id: 2, name: "Store 2", lat: -34.399, lng: 150.640 },
+        // Add more stores as necessary
+    ]);
+
+    useEffect(() => {
+        const googleMapsScriptId = 'google-maps-script';
+
+        if (document.getElementById(googleMapsScriptId) || window.google) {
+            setIsMapLoaded(true);
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.id = googleMapsScriptId;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBrr9EO81znawNvQ2GEDTe3K2aKsCs8vHQ&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
+
+    window.initMap = () => {
+        setIsMapLoaded(true);
+
+        if (!mapRef.current) return;
+
+        const initialCenter = { lat: -34.397, lng: 150.644 };
+        const map = new window.google.maps.Map(mapRef.current, {
+            zoom: 8,
+            center: initialCenter,
+        });
+
+        // Add markers for each store
+        stores.forEach(store => {
+            new window.google.maps.Marker({
+                position: { lat: store.lat, lng: store.lng },
+                map: map,
+                title: store.name,
+            });
+        });
+    };
+
+    return (
+        <>
+            <h1>Locations</h1>
+            <div ref={mapRef} style={{ height: '400px', width: '100%' }}></div>
+        </>
+    );
+}
+
+export default Locations;
