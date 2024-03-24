@@ -117,16 +117,18 @@ function Home() {
         </div>
         <div className='section-4'>
             <div className='flex-container'>
-                <div className='image-container bg-image black-can'>
-                </div>
+                <a href="https://www.amazon.com/dp/B09K7Y5DG7/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD?th=1" target="_blank" rel="noopener noreferrer">
+                    <div className='image-container bg-image black-can'></div>
+                </a>
                 <h2>Dino Luzzi Original</h2>
                 <a href="https://www.amazon.com/dp/B09K7Y5DG7/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD?th=1" target="_blank" rel="noopener noreferrer" className="btn btn-accent">
                         Buy Now
                 </a>
             </div>
             <div className='flex-container'>
-                <div className='image-container bg-image white-can'>
-                </div>
+                <a href="https://www.amazon.com/dp/B0C46ZY3LX/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD?th=1" target="_blank" rel="noopener noreferrer">
+                <div className='image-container bg-image white-can'></div>
+                </a>
                 <h2>Dino Luzzi Sugar Free</h2>
                 <a href="https://www.amazon.com/dp/B0C46ZY3LX/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD?th=1" target="_blank" rel="noopener noreferrer" className="btn btn-accent">
                         Buy Now
@@ -139,7 +141,7 @@ function Home() {
         <div className='section-5'>
             <h1 className='section-title'> NEWS </h1>
             <div>
-                
+
             </div>
         </div>
         </>
