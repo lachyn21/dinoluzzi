@@ -52,7 +52,7 @@ h1 {
 /* Images */
 
 .cropped-logo {
-  height: 4rem;
+  height: 80px;
 } 
 
 .medium-image {
@@ -60,7 +60,7 @@ h1 {
 }
 
 .large-image {
-  height: 700px;
+  height: 800px;
 }
 
 .icon {
@@ -115,8 +115,30 @@ h1 {
   padding-bottom: 1rem;
 }
 
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.news-container {
+
+}
+
 .section-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-bottom: 1rem;
 }
 
@@ -151,14 +173,24 @@ h1 {
 }
 
 .btn-accent {
-  background-color: var(--color-accent);
   color: var(--color-white);
+  background-image: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent-variant)  51%, var(--color-accent)  100%);
+  transition: 0.5s;
+  background-size: 200% auto;        
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-accent:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Additional styles for hover/focus effects */
 .btn:hover,
 .btn:focus {
-  opacity: 0.8;
   outline: none;
 }
 

@@ -81,7 +81,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
 }
 
 .section-3 .right .sec3-title {
@@ -114,6 +114,7 @@
     align-items: center;
     align-content: center;
     gap:10rem;
+    padding: 4rem 0;
 }
 
 .section-4 .bg-image {
@@ -139,6 +140,21 @@
 
 .section-4 .black-can:hover {
     background-image: url("../assets/dinoCanBlack2.png");
+}
+
+/* Section 5 */
+
+.section-5 {
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap:3rem;
+    padding: 4rem 0;
 }
 
 
