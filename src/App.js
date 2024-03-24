@@ -4,7 +4,6 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import News from './pages/News';
 import Locations from './pages/Locations';
-import Purchase from './pages/Purchase';
 import FAQ from './pages/FAQ';
 import NotFound404 from './pages/NotFound404';
 import Chatbot from './components/chatbot';
@@ -15,14 +14,11 @@ function App() {
     <>
     <Navbar />
       <div className='container'>
-        {/* Add Chatbot component */}
         <Chatbot />
-
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/news" element={<News />}/>
             <Route path="/locations" element={<Locations />}/>
-            <Route path="/purchase" element={<Purchase />}/>
             <Route path="/faq" element={<FAQ />}/>
             <Route path="*" element={<NotFound404 />}/>
         </Routes> 
