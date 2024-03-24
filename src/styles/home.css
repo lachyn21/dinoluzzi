@@ -149,13 +149,15 @@
     margin: 0 auto;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     gap:3rem;
     padding: 4rem 0;
 }
+
+
 
 
 

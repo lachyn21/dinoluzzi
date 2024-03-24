@@ -6,7 +6,10 @@ import EnergyIcon from "../assets/energyIcon.png";
 import ItalyIcon from "../assets/italyIcon.png";
 import LeafIcon from "../assets/leafIcon.png";
 import ZeroIcon from "../assets/zeroIcon.png";
-import DinoSparkle from "../assets/dinoSparkle.png"
+import DinoSparkle from "../assets/dinoSparkle.png";
+import News1 from "../assets/News1.jpg";
+import News2 from "../assets/News2.jpeg";
+import News3 from "../assets/News3.jpeg";
 
 import "../styles/home.css";
 
@@ -140,9 +143,61 @@ function Home() {
         </div>
         <div className='section-5'>
             <h1 className='section-title'> NEWS </h1>
-            <div>
-
-            </div>
+            <a href="https://finance.yahoo.com/news/dino-luzzi-energy-drink-set-201500168.html" target="_blank" rel="noopener noreferrer" className='news-container'>
+                <img src={News1} className='news-image' alt="UF students looking at computer">
+                </img>
+                <div className='text-content'>
+                    <h2>
+                        Dino Luzzi Energy Drink is Set to Energize the University of Florida's Tech Community
+                    </h2>
+                    <p>
+                        Dino Luzzi Energy Drink sponsors the "Apply, Model, Optimize: Nurturing Gator Unity and Synergy" hackathon at the University of Florida. 
+                        Hosted by the UF Open Source Club, this event challenges students to showcase their coding skills in a collaborative environment. 
+                        The hackathon features a "Dino Luzzi Energy Challenge" award, highlighting the brand's commitment to supporting technological innovation and young professionals' ambition.
+                    </p>
+                    <br></br>
+                    <p className='accent-text'>
+                        Mar 22, 2024
+                    </p>
+                </div>
+            </a>
+            <a href="https://finance.yahoo.com/news/dino-luzzi-energy-drink-fueling-140000739.html" target="_blank" rel="noopener noreferrer" className='news-container'>
+                <img src={News2} className='news-image' alt="DinoLuzzi Logo">
+                </img>
+                <div className='text-content'>
+                    <h2>
+                        Dino Luzzi Energy Drink Fueling the Future of Competitive Gaming
+                    </h2>
+                    <p>
+                        Italian Food & Beverage Corp. (IFBC) collaborates with King E-sport to enter the Esports market. 
+                        The partnership debuted at Milan Games Week & Cartoomics, where IFBC's Dino Luzzi Energy Drink gained acclaim. 
+                        Plans are underway to expand into the US Esports market, with CEO Dino Luzzi expressing excitement about enhancing the gaming experience globally.
+                    </p>
+                    <br></br>
+                    <p className='accent-text'>
+                        Dec 04, 2023
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.wjhl.com/business/press-releases/accesswire/820119/dino-luzzi-energy-drink-and-king-esport-set-to-ignite-the-gaming-scene-at-xmas-comics-esports-partnership-energizing-dino-luzzis-influence/" target="_blank" rel="noopener noreferrer" className='news-container'>
+                <img src={News3} className='news-image' alt="Xmas Comics Logo">
+                </img>
+                <div className='text-content'>
+                    <h2>
+                        Dino Luzzi Energy Drink and King Esport Set to Ignite the Gaming Scene
+                    </h2>
+                    <p>
+                        Italian Food Beverage Corp. (IFBC) continues its collaboration with King Esport, achieving 32.7 million views and attracting over 35,000 visitors at the XMAS COMICS gaming event.
+                        As the esports industry grows, specialized energy drinks like IFBC's are becoming essential for gamers' performance. 
+                        CEO Dino Luzzi sees esports as the perfect demographic to build the brand.
+                    </p>
+                    <br></br>
+                    <p className='accent-text'>
+                        Dec 27, 2023
+                    </p>
+                </div>
+            </a>
+            
         </div>
         </>
 

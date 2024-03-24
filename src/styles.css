@@ -49,6 +49,10 @@ h1 {
     font-size: 2.5rem;
   }
 
+.accent-text {
+  color: var(--color-accent);
+}
+
 /* Images */
 
 .cropped-logo {
@@ -61,6 +65,10 @@ h1 {
 
 .large-image {
   height: 800px;
+}
+
+.news-image {
+  max-height: 350px;
 }
 
 .icon {
@@ -108,33 +116,31 @@ h1 {
   text-align: center;
   width: 50%;
   border-color: var(--color-accent);
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 4px;
   border-style: solid;
   padding: 0 10px;
   padding-bottom: 1rem;
 }
 
-         
-.btn-grad {
-  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
 
 .news-container {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  border-color: var(--color-accent);
+  border-width: 2px;
+  border-radius: 4px;
+  border-style: solid;
+  align-content: stretch;
+}
 
+.news-container .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .section-title {
