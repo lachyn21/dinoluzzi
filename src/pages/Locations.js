@@ -126,7 +126,7 @@ function Locations() {
 
         setFilteredStores(fetchFilteredStores());
     }, [searchTerm, radius, resultLimit, userLocation]);
-
+    
     useEffect(() => {
         const googleMapsScriptId = 'google-maps-script';
 
@@ -205,44 +205,45 @@ function Locations() {
         return deg * (Math.PI / 180);
     }
 
-     return (
-      <>
-          <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Dino Luzzi Energy Drink</h1>
-          <h1 style={{ textAlign: 'center', color: '#C4A00E', textDecoration: 'underline', marginBottom: '30px' }}>Store Locations</h1>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
-              <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Enter address"
-                  style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '30%' }}
-              />
-              <input
-                  type="number"
-                  min="0"
-                  value={radius}
-                  onChange={(e) => setRadius(e.target.value)}
-                  placeholder="Radius in miles"
-                  style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '20%' }}
-              />
-              <input
-                  type="number"
-                  min="1"
-                  value={resultLimit}
-                  onChange={(e) => setResultLimit(e.target.value)}
-                  placeholder="Max results"
-                  style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '20%' }}
-              />
-          </div>
-          <div ref={mapRef} className="map-container" style={{ height: '400px', width: '100%' }}></div>
-          <ul>
-              {filteredStores.map((store, index) => (
-                  <li key={store.id}>
-                      {index + 1}. {store.name} - {store.address} - {userLocation && `${calculateDistance(userLocation.lat, userLocation.lng, store)} miles`}
-                  </li>
-              ))}
-          </ul>
-      </>
+    return (
+        <>
+            <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Dino Luzzi Energy Drink</h1>
+            <h1 style={{ textAlign: 'center', color: '#C4A00E', textDecoration: 'underline', marginBottom: '30px' }}>Store Locations</h1>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
+                <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="Enter address"
+                    style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '30%' }}
+                />
+                <input
+                    type="number"
+                    min="0"
+                    value={radius}
+                    onChange={(e) => setRadius(e.target.value)}
+                    placeholder="Radius in miles"
+                    style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '20%' }}
+                />
+                <input
+                    type="number"
+                    min="1"
+                    value={resultLimit}
+                    onChange={(e) => setResultLimit(e.target.value)}
+                    placeholder="Max results"
+                    style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '20%' }}
+                />
+            </div>
+            <div ref={mapRef} className="map-container" style={{ height: '400px', width: '100%', marginBottom: '20px' }}></div>
+            <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>Results</h2>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+                {filteredStores.map((store, index) => (
+                    <li key={store.id} style={{ marginBottom: '10px', backgroundColor: '#C4A00E', padding: '10px', borderRadius: '5px', textAlign: 'center', fontSize: '18px', color: '#f0f0f0' }}>
+                        {index + 1}. {store.name} - {store.address} - {userLocation && `${calculateDistance(userLocation.lat, userLocation.lng, store)} miles`}
+                    </li>
+                ))}
+            </ul>
+        </>
     );
 }
 
