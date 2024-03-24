@@ -1,0 +1,30 @@
+/* Set up HTML structure and include 
+the Google Maps API script with API key 
+Note for myself: this is not completed yet */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locator</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <div id="map"></div>
+    <div id="search">
+        <input type="text" id="search-lat" placeholder="Latitude">
+        <input type="text" id="search-lng" placeholder="Longitude">
+        <input type="number" id="search-distance" placeholder="Distance (km)">
+        <button onclick="searchStores()">Search</button>
+    </div>    
+    <!-- Your API key is inserted below -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrr9EO81znawNvQ2GEDTe3K2aKsCs8vHQ&callback=initMap" async defer></script>
+    <script src="mapscript.js"></script>
+    <script src="locations.js"></script>
+
+</body>
+</html>
+
+
+
