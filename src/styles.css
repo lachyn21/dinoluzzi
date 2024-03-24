@@ -52,7 +52,7 @@ h1 {
 /* Images */
 
 .cropped-logo {
-  height: 4rem;
+  height: 80px;
 } 
 
 .medium-image {
@@ -60,7 +60,7 @@ h1 {
 }
 
 .large-image {
-  height: 700px;
+  height: 800px;
 }
 
 .icon {
