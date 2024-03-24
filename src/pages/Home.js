@@ -132,9 +132,16 @@ function Home() {
                         Buy Now
                 </a>
             </div>
-            
         </div>
-
+        <div className='divider'>
+            <img src={Divider} alt="DividerImage"></img>
+        </div>
+        <div className='section-5'>
+            <h1 className='section-title'> NEWS </h1>
+            <div>
+                
+            </div>
+        </div>
         </>
 
     );
