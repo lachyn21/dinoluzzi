@@ -77,6 +77,10 @@ h1 {
   width: 5rem;
 }
 
+.socials-image {
+  height: 30px;
+}
+
 .divider {
   display: flex;
   justify-content: center;
@@ -215,6 +219,23 @@ h1 {
 .btn-accent:hover,
 .btn-accent:focus {
   background-color: var(--color-accent-variant);
+}
+
+/* ======= Components ======== */
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  padding: 1rem;
+}
+
+.socials {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
 }
 
 /* Nav Bar */

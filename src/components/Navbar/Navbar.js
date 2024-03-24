@@ -9,9 +9,6 @@ export default function Navbar()
             <a href="/">
                 <img src={logo} className="cropped-logo" alt="DinoLuzziLogo"></img>
             </a>
-            {/* <Link to="/">
-                DINO LUZZI ENERGY DRINK
-            </Link> */}
         </div>
 
         <div className="links">
@@ -22,7 +19,6 @@ export default function Navbar()
                 <CustomLink className="purchase" to="https://www.amazon.com/dp/B09K7Y5DG7/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD">Buy Now</CustomLink>
             </ul>
         </div>
-        
         
     </nav>
 }

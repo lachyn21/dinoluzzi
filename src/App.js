@@ -1,6 +1,7 @@
 import {Routes,Route} from "react-router-dom";
 
 import Navbar from './components/Navbar/Navbar';
+import Footer from "./components/Footer";
 import Home from './pages/Home';
 import News from './pages/News';
 import Locations from './pages/Locations';
@@ -23,6 +24,7 @@ function App() {
             <Route path="*" element={<NotFound404 />}/>
         </Routes> 
       </div>
+    <Footer />
     </>
   );
 }
