@@ -7,12 +7,13 @@ import ItalyIcon from "../assets/italyIcon.png";
 import LeafIcon from "../assets/leafIcon.png";
 import ZeroIcon from "../assets/zeroIcon.png";
 import DinoSparkle from "../assets/dinoSparkle.png"
+
 import "../styles/home.css";
 
 function Home() {
     return (
         <>
-        <div className="container section-1">
+        <div className="section-1">
             <div className="left">
                 <div className="sec1-title section-title">
                     <h1 className="text1">DINO LUZZI <span className="text2">ENERGY DRINK</span></h1>
@@ -41,7 +42,7 @@ function Home() {
         <div className='divider'>
             <img src={Divider} alt="DividerImage"></img>
         </div>
-        <div className='container section-2'>
+        <div className='section-2'>
             <div>
                 <div className='icon-container'>
                     <img src={DialIcon} className='icon' alt='DialIcon'></img>
@@ -113,6 +114,25 @@ function Home() {
                     </p>
                 </div>
             </div>
+        </div>
+        <div className='section-4'>
+            <div className='flex-container'>
+                <div className='image-container bg-image black-can'>
+                </div>
+                <h2>Dino Luzzi Original</h2>
+                <a href="https://www.amazon.com/dp/B09K7Y5DG7/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD?th=1" target="_blank" rel="noopener noreferrer" className="btn btn-accent">
+                        Buy Now
+                </a>
+            </div>
+            <div className='flex-container'>
+                <div className='image-container bg-image white-can'>
+                </div>
+                <h2>Dino Luzzi Sugar Free</h2>
+                <a href="https://www.amazon.com/dp/B0C46ZY3LX/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD?th=1" target="_blank" rel="noopener noreferrer" className="btn btn-accent">
+                        Buy Now
+                </a>
+            </div>
+            
         </div>
 
         </>

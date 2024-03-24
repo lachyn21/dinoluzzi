@@ -19,7 +19,7 @@ export default function Navbar()
                 <CustomLink to="/">Home</CustomLink>
                 <CustomLink to="/news">News</CustomLink>
                 <CustomLink to="/locations">Store Locations</CustomLink>
-                <CustomLink className="purchase" to="/purchase">Buy Now</CustomLink>
+                <CustomLink className="purchase" to="https://www.amazon.com/dp/B09K7Y5DG7/ref=cm_sw_r_wa_api_glt_fabc_2XYCJFQW66HZ6QFF07QD">Buy Now</CustomLink>
             </ul>
         </div>
         

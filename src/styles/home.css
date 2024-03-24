@@ -2,6 +2,8 @@
 
 /* SECTION 1 */
 .section-1 {
+    width: 80%;
+    margin: 0 auto;
     height: auto;
     display: flex;
     justify-content: center;
@@ -48,14 +50,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 2rem;
 }
 
 .section-2 div {
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 1rem;
-    gap: 5rem;
+    gap: 10rem;
 }
 
 .section-2 div .icon-container{
@@ -68,13 +72,16 @@
 
 /* Section 3 */
 
-.section-3 {   
-    width: 80%; 
+.section-3 {
+    width: 70%;
+    margin: 0 auto;
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    align-content: center;
+    padding-bottom: 3rem;
 }
 
 .section-3 .right .sec3-title {
@@ -92,6 +99,46 @@
     text-align: center;
     width: 50%;
     gap: 2rem;
+}
+
+
+/* Section 4 */
+
+.section-4 {
+    width: 70%;
+    margin: 0 auto;
+    height: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap:10rem;
+}
+
+.section-4 .bg-image {
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.section-4 .white-can {
+    background-image: url("../assets/dinoCanWhite1.png");
+}
+
+.section-4 .white-can:hover {
+    background-image: url("../assets/dinoCanWhite2.png");
+}
+
+.section-4 .black-can {
+    background-image: url("../assets/dinoCanBlack1.png");
+}
+
+.section-4 .black-can:hover {
+    background-image: url("../assets/dinoCanBlack2.png");
 }
 
 
