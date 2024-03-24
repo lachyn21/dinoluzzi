@@ -57,6 +57,9 @@ function Locations() {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredStores, setFilteredStores] = useState([]);
     const [userLocation, setUserLocation] = useState(null);
+    const [radius, setRadius] = useState('');
+    const [resultLimit, setResultLimit] = useState('');
+    
     const stores = [
       { id: 1, name: 'Barzini’s', address: '2451 Broadway, NYC, NY 10024, United States', lat: 40.792891, lng: -73.973672 },
       { id: 2, name: 'Westside Market', address: '2589 Broadway, NYC, NY 10025, United States', lat: 40.798772, lng: -73.969194 },
@@ -109,13 +112,20 @@ function Locations() {
     ];
 
     useEffect(() => {
-        if (!searchTerm) {
-            setFilteredStores([]);
-            return;
-        }
-        const filtered = stores.filter(store => store.address.includes(searchTerm));
-        setFilteredStores(filtered);
-    }, [searchTerm]);
+        const fetchFilteredStores = () => {
+            if (!userLocation) {
+                return [];
+            }
+
+            return stores.filter(store => {
+                const distance = calculateDistance(userLocation.lat, userLocation.lng, store);
+                return (!searchTerm || store.address.toLowerCase().includes(searchTerm.toLowerCase())) &&
+                      (!radius || parseFloat(distance) <= parseFloat(radius));
+            }).slice(0, resultLimit ? parseInt(resultLimit) : Infinity);
+        };
+
+        setFilteredStores(fetchFilteredStores());
+    }, [searchTerm, radius, resultLimit, userLocation]);
 
     useEffect(() => {
         const googleMapsScriptId = 'google-maps-script';
@@ -195,28 +205,44 @@ function Locations() {
         return deg * (Math.PI / 180);
     }
 
-    return (
-        <>
-            <h1 style={{ textAlign: 'center', marginTop: '50px'}}>Dino Luzzi Energy Drink</h1>
-            <h1 style={{ textAlign: 'center', color: '#C4A00E', textDecoration: 'underline'}}>Store Locations</h1>
-            <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Enter address"
-                style={{ padding: '15px', fontSize: '18px', borderRadius: '5px', border: '1px solid #ccc', width: '400px' }}
-            />
-            <div ref={mapRef} className="map-container" style={{ height: '400px', width: '100%' }}></div>
-            {filteredStores.length > 0 && (
-                <ul>
-                  {filteredStores.map((store, index) => (
-                    <li key={store.id}>
-                      {index + 1}. {store.name} - {store.address} - {userLocation && calculateDistance(userLocation.lat, userLocation.lng, store)} miles
-                    </li>
-                  ))}
-                </ul>
-            )}
-        </>
+     return (
+      <>
+          <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Dino Luzzi Energy Drink</h1>
+          <h1 style={{ textAlign: 'center', color: '#C4A00E', textDecoration: 'underline', marginBottom: '30px' }}>Store Locations</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
+              <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Enter address"
+                  style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '30%' }}
+              />
+              <input
+                  type="number"
+                  min="0"
+                  value={radius}
+                  onChange={(e) => setRadius(e.target.value)}
+                  placeholder="Radius in miles"
+                  style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '20%' }}
+              />
+              <input
+                  type="number"
+                  min="1"
+                  value={resultLimit}
+                  onChange={(e) => setResultLimit(e.target.value)}
+                  placeholder="Max results"
+                  style={{ padding: '10px', fontSize: '16px', borderRadius: '5px', border: '1px solid #ccc', width: '20%' }}
+              />
+          </div>
+          <div ref={mapRef} className="map-container" style={{ height: '400px', width: '100%' }}></div>
+          <ul>
+              {filteredStores.map((store, index) => (
+                  <li key={store.id}>
+                      {index + 1}. {store.name} - {store.address} - {userLocation && `${calculateDistance(userLocation.lat, userLocation.lng, store)} miles`}
+                  </li>
+              ))}
+          </ul>
+      </>
     );
 }
 
